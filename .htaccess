@@ -1,0 +1,29 @@
+Options -Indexes +FollowSymLinks
+DirectoryIndex index.php index.html
+
+# No error reporting
+php_flag display_errors Off
+
+# Magic quotes disabled
+php_flag magic_quotes_gpc Off
+
+# Custom error documents
+ErrorDocument 401 /templates/error.php?number=401
+ErrorDocument 403 /templates/error.php?number=403
+ErrorDocument 404 /templates/error.php?number=404
+ErrorDocument 500 /templates/error.php?number=500
+ErrorDocument 505 /templates/error.php?number=505
+
+# Pretty URL rewriting
+RewriteEngine On
+
+# if it is a file, leave it alone
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+) - [PT,L]
+
+# if it is not, forward it to index.php
+# prepend at lest the second URL with your BASE_URL
+# (with, or without the first slash, depending on your environment)
+# like: RewriteRule (.*) /BASE_URL/index.php
+RewriteRule (.*) /index.php
