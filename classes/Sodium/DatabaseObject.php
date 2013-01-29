@@ -1,7 +1,7 @@
 <?php
 
 //
-// Sodium 2.0.6-alpha
+// Sodium 2.0.7-alpha
 //
 // This file is part of the Sodium PHP framework, released under the
 // Creative Commons Attribution-NonCommercial-ShareAlike licence.
@@ -43,22 +43,6 @@ class DatabaseObject {
 			);
 		}
 	}
-			
-	//
-	// Static, class related functions
-	//
-	
-	public static function findAll() {
-		
-	}
-	
-	public static function find($conditions) {
-		
-	}
-	
-	public static function __callStatic($name, $arguments) {
-		
-	}
 	
 	//
 	// Object part
@@ -81,11 +65,6 @@ class DatabaseObject {
 		if (static::$saveMode == static::SaveModeOnChange) {
 			$this->save();
 		}
-	}
-	
-	public function __call($name, $arguments) {
-		
-	}
-	
+	}	
 	
 }
