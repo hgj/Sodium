@@ -1,7 +1,7 @@
 <?php
 
 //
-// Sodium 2.0.7-alpha
+// Sodium 2.0.9-alpha
 //
 // This file is part of the Sodium PHP framework, released under the
 // Creative Commons Attribution-NonCommercial-ShareAlike licence.
