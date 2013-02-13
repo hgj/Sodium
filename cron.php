@@ -1,7 +1,7 @@
 <?php
 
 //
-// Sodium 2.0.9-alpha
+// Sodium 2.0.10-alpha
 //
 // This file is part of the Sodium PHP framework, released under the
 // Creative Commons Attribution-NonCommercial-ShareAlike licence.
@@ -41,5 +41,7 @@ if (!@include_once('configuration.php')) {
 		trigger_error("Sodium\cron.php : Can not load configuration from 'configuration.php' or 'default-configuration.php'. Please check your installation!", E_USER_ERROR);
 	}
 }
+
+Sodium\Modules::initialise();
 
 Sodium\Modules::callHooks('sodiumCron');
