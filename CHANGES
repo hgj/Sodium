@@ -1,4 +1,14 @@
-2.0.11-alpha
+2.1.0-alpha
+- Added work in progress changes as version 2.1.0
+- Added Doxygen for documentation
+- Enhanced .htaccess and .gitignore
+- Added LICENSE
+- Added the previously non-public TODO file
+- Fixed autoload.php
+- Added work in progress database related classes
+- Small code and style fixes
+
+2.1.0-alpha
 - Fixed directory iteration in many classes
 - Dropped PHP-5.2 branch
 - Removed some deprecated functions
