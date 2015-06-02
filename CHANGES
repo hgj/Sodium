@@ -1,0 +1,61 @@
+2.1.0-alpha
+- Added work in progress changes as version 2.1.0
+- Added Doxygen for documentation
+- Enhanced .htaccess and .gitignore
+- Added LICENSE
+- Added the previously non-public TODO file
+- Fixed autoload.php
+- Added work in progress database related classes
+- Small code and style fixes
+
+2.1.0-alpha
+- Fixed directory iteration in many classes
+- Dropped PHP-5.2 branch
+- Removed some deprecated functions
+
+2.0.10-alpha
+- Fixed cron execution
+- Migrated Sodium\General::htmlEntities() from the old code
+
+2.0.9-alpha
+- Added work in progress DatabaseObject class
+- Added ExampleDatabaseObject as guide for the new DB functions
+
+2.0.8-alpha
+- Added Database class to manage database connections
+
+2.0.7-alpha
+- __autoload now loads classes from modules directory
+- Fixed template inclusion bug when the name was specified
+- Unified error messages
+
+2.0.6-alpha
+- Reordered initialisation and finalisation process
+- Completed the ExampleModule class and hooks
+
+2.0.5-alpha
+- Fixed infinite buffer closing loops
+
+2.0.4-alpha
+- Created cron.php for cron jobs.
+- Moved configurations to separate *Configuration classes.
+
+2.0.3-alpha
+- Introduced php-5.2 branch for PHP 5.2 support
+- Fixed some minor issues
+
+2.0.2-alpha
+- Dropped no namespace release, create pathes instead.
+- Added getFilesPCRE() in General.
+- defaultHeaders -> headers in View.
+- Separated headers into View::addHeader() and View::setHeader().
+- Added nocache support to Modules.
+- Moved __autoload() into a separate file.
+- Fixed array_merge in autoload.php, Modules and in the pages controller.
+
+2.0.1-alpha
+- Fixed some module loading issues
+- Renamed a lot of hooks
+
+2.0.0-alpha
+Rewritten Sodium from scratch, based on legacy - in one shot.

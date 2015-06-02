@@ -1,7 +1,7 @@
 <?php
 
 //
-// Sodium 2.0.10-alpha
+// Sodium 2.1.0-alpha
 //
 // This file is part of the Sodium PHP framework, released under the
 // Creative Commons Attribution-NonCommercial-ShareAlike licence.
@@ -9,7 +9,7 @@
 // The framework is created and maintaned by Gergely J. Horváth.
 // More information should be available at http://hgj.hu
 //
-// Copyright 2013 by Gergely J. Horváth.
+// Copyright 2014 by Gergely J. Horváth.
 //
 
 namespace Sodium;
@@ -57,7 +57,7 @@ class Modules {
 				// Or generate it now, and save it for later use
 				self::$instance = new Modules();
 				$files = new \RecursiveIteratorIterator(
-					new \RecursiveDirectoryIterator(BASE_PATH . '/modules', \FilesystemIterator::FOLLOW_SYMLINKS)
+					new \RecursiveDirectoryIterator(BASE_PATH . '/modules', \FilesystemIterator::FOLLOW_SYMLINKS | \FilesystemIterator::SKIP_DOTS)
 				);
 				foreach ($files as $file) {
 					$className = str_replace('.php', '', basename($file));
