@@ -1,7 +1,7 @@
 <?php
 
 //
-// Sodium 2.0.10-alpha
+// Sodium 2.0.11-alpha
 //
 // This file is part of the Sodium PHP framework, released under the
 // Creative Commons Attribution-NonCommercial-ShareAlike licence.
@@ -9,7 +9,7 @@
 // The framework is created and maintaned by Gergely J. Horváth.
 // More information should be available at http://hgj.hu
 //
-// Copyright 2013 by Gergely J. Horváth.
+// Copyright 2014 by Gergely J. Horváth.
 //
 
 namespace Sodium;
@@ -30,7 +30,7 @@ class General {
 	 */
 	public static function getFilesPCRE($directory, $pattern, $fullPathMatch = false) {
 		$iterator = new \RecursiveIteratorIterator(
-			new \RecursiveDirectoryIterator($directory, \FilesystemIterator::FOLLOW_SYMLINKS)
+			new \RecursiveDirectoryIterator($directory, \FilesystemIterator::FOLLOW_SYMLINKS | \FilesystemIterator::SKIP_DOTS)
 		);
 		$result = array();
 		foreach ($iterator as $key => $value) {

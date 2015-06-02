@@ -1,0 +1,31 @@
+= High priority
+
+* Ability to specify DBO keys as array('key1', 'key2')
+* Caching of SQL queries in DBO
+* Caching of rows in DBOs
+* Make the release process work
+* Finish the User class
+* Finish the View class
+* Finish the module system
+	- List all the hooks we'll need
+	- Ability to use modules as "modules" (i.e. not just hooks, and to render pages or partial content)
+		-> e.g. specify a module to use as PHP session storage
+* Finish the Mailer and Mail classes
+* Error Pages
+
+= Medium priority
+
+* Variable-length argument lists for AND and OR in DBO->search()
+* Central cron information (last run, etc)
+* Ability to find out if the cache is outdated?
+* Performance test the calling of hooks
+* Implement attachments
+* Clear all TODO from the source
+* Every method (initialise() methods for instance) should return something
+* SASS/SCSS support
+* HAML support
+* View link()
+
+= Low priority
+
+* Create a (responsive and retina ready :P) default template

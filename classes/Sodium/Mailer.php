@@ -1,7 +1,7 @@
 <?php
 
 //
-// Sodium 2.0.10-alpha
+// Sodium 2.0.11-alpha
 //
 // This file is part of the Sodium PHP framework, released under the
 // Creative Commons Attribution-NonCommercial-ShareAlike licence.
@@ -9,7 +9,7 @@
 // The framework is created and maintaned by Gergely J. Horváth.
 // More information should be available at http://hgj.hu
 //
-// Copyright 2013 by Gergely J. Horváth.
+// Copyright 2014 by Gergely J. Horváth.
 //
 
 namespace Sodium;
@@ -65,8 +65,8 @@ class Mailer {
 	 * @return bool True, if the address seems valid, false otherwise.
 	 */
 	public static function validAddress($email, $mxCheck = false) {
-		if (eregi("^[^0-9][A-z0-9_-]+[@][A-z0-9_-]+([.][A-z0-9_-]+)*[.][A-z]{2,4}$", $email)) {
-			list( , $domain) = split('@', $email);
+		if (preg_match("/^[^0-9][A-z0-9_-]+[@][A-z0-9_-]+([.][A-z0-9_-]+)*[.][A-z]{2,4}$/i", $email)) {
+			list( , $domain) = explode('@', $email);
 			if ($mxCheck) {
 				return checkdnsrr($domain, 'MX');
 			} else {
