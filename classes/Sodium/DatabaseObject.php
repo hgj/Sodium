@@ -1,10 +1,10 @@
 <?php
 
 //
-// Sodium 2.1.0-alpha
+// Sodium 2.2.0-alpha
 //
 // This file is part of the Sodium PHP framework, released under the
-// Creative Commons Attribution-NonCommercial-ShareAlike licence.
+// Creative Commons Attribution 4.0 International licence.
 //
 // The framework is created and maintaned by Gergely J. Horváth.
 // More information should be available at http://hgj.hu
